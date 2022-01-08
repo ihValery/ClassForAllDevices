@@ -10,19 +10,31 @@ import SwiftUI
 //MARK: MiddleHeaderPanel
 
 struct MiddleHeaderPanel: View {
+    
+    //MARK: Properties
+    
+    let deviceModel: String
+    private let heightHeader: CGFloat = 80
+    
+    //MARK: Initializer
+    
+    init(_ deviceModel: String) {
+        self.deviceModel = deviceModel
+    }
+
     var body: some View {
-        Text(GlobalConstant.deviceModel)
+        Text(deviceModel)
             .font(.largeTitle)
             .foregroundColor(.defaultText)
             .padding()
             .frame(maxWidth: .infinity)
-            .frame(height: GlobalConstant.heightHeader)
+            .frame(height: heightHeader)
             .background(Color.tePapaGreen)
     }
 }
 
 struct MiddleHeaderPanel_Previews: PreviewProvider {
     static var previews: some View {
-        MiddleHeaderPanel()
+        MiddleHeaderPanel("iPhone")
     }
 }

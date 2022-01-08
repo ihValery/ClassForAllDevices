@@ -11,8 +11,8 @@ import SwiftUI
 struct ClassForAllDevicesApp: App {
     var body: some Scene {
         WindowGroup {
-//            MainView()
-            MVCSwiftUIView()
+            MainView()
+//            MVCSwiftUIView()
         }
     }
 }

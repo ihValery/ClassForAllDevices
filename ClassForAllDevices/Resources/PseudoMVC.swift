@@ -9,12 +9,12 @@ import SwiftUI
 
 //MARK: - Model
 
-struct Device {
+struct DevicePseudo {
     let name      : String
     let rezolution: String
 }
 
-class DeviceStore: ObservableObject {
+class DeviceStorePseudo: ObservableObject {
     
     //MARK: Properties
 
@@ -23,7 +23,7 @@ class DeviceStore: ObservableObject {
     
     //MARK: Initializer
 
-    init(device: Device) {
+    init(device: DevicePseudo) {
         name       = device.name
         rezolution = device.rezolution
     }
@@ -31,11 +31,11 @@ class DeviceStore: ObservableObject {
 
 //MARK: - Controller
 
-class DeviceController: ObservableObject {
+class DeviceControllerPseudo: ObservableObject {
 
     //MARK: Properties
 
-    @Published var getData: DeviceStore?
+    @Published var getData: DeviceStorePseudo?
     
     //MARK: Public Methods
 
@@ -43,10 +43,10 @@ class DeviceController: ObservableObject {
         let deviceName = UIDevice.current.name
         let rezolution = UIScreen.main.bounds.size
         
-        let device = Device(name: deviceName,
+        let device = DevicePseudo(name: deviceName,
                             rezolution: "\(Int(rezolution.width)) x \(Int(rezolution.height)) px")
         
-        getData = DeviceStore(device: device)
+        getData = DeviceStorePseudo(device: device)
     }
     
     func removeDeviceInfo() {
@@ -60,9 +60,9 @@ struct MVCSwiftUIView: View {
 
     //MARK: Properties
 
-    @ObservedObject private var controller = DeviceController()
+    @ObservedObject private var controller = DeviceControllerPseudo()
     
-    private let plugDevice = Device(name: "...", rezolution: "...")
+    private let plugDevice = DevicePseudo(name: "...", rezolution: "...")
     private let spacing: Double = 60
     
     private var  isEmptyDeviceStore: Bool {
@@ -72,7 +72,7 @@ struct MVCSwiftUIView: View {
     var body: some View {
         
         VStack(spacing: spacing) {
-            MiniTableView(deviceInfo: controller.getData ?? DeviceStore(device: plugDevice))
+            MiniTableView(deviceInfo: controller.getData ?? DeviceStorePseudo(device: plugDevice))
             
             VStack {
                 ButtonView("get Device info", !isEmptyDeviceStore) {
@@ -141,7 +141,7 @@ struct MiniTableView: View {
     
     //MARK: Properties
     
-    var deviceInfo: DeviceStore
+    var deviceInfo: DeviceStorePseudo
     
     var body: some View {
         VStack {

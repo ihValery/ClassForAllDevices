@@ -10,18 +10,43 @@ import SwiftUI
 //MARK: TopImageView
 
 struct TopImagePanel: View {
+    
+    //MARK: Properties
+    
+    let image: Image
+    let heightImage: CGFloat
+    
+    private let cornerRadius: CGFloat = 16
+    
+    //MARK: Initializer
+    
+    init(_ image: Image, _ heightImage: CGFloat) {
+        self.image = image
+        self.heightImage = heightImage
+    }
+    
     var body: some View {
-        GlobalConstant.image
-            .resizable()
-            .scaledToFill()
-            .frame(maxWidth: .infinity)
-            .frame(height: GlobalConstant.heightImage, alignment: .top)
-            .clipped()
+        ZStack(alignment: .bottomTrailing) {
+            image
+                .resizable()
+                .scaledToFill()
+                .frame(height: heightImage, alignment: .top)
+                .clipped()
+            
+            Text("\( Int(heightImage) )")
+                .font(.headline)
+                .foregroundColor(.defaultText)
+                .padding()
+                .background(Color.tePapaGreen,
+                            in: RoundedRectangle(cornerRadius: cornerRadius))
+                .padding()
+        }
+        .frame(height: heightImage)
     }
 }
 
 struct TopImagePanel_Previews: PreviewProvider {
     static var previews: some View {
-        TopImagePanel()
+        TopImagePanel(Image("BigSur"), 300)
     }
 }

@@ -12,19 +12,27 @@ import SwiftUI
 struct MainView: View {
     
     //MARK: Properties
+    
+    @ObservedObject private var controller = Controller()
+    
     private let noSpacing: Double = 0
     private let gradient = Gradient(colors: [.ziggurat, .tePapaGreen])
     
     var body: some View {
         VStack(spacing: noSpacing) {
-            TopImagePanel()
+            TopImagePanel(controller.getData?.imageName ?? Image("no image"),
+                          controller.getData?.heightImage ?? 0)
             
-            MiddleHeaderPanel()
+            MiddleHeaderPanel(controller.getData?.modelName ?? "no model")
             
-            BottomTablePanel()
+            BottomTablePanel(controller.getData?.numberCells ?? 0)
         }
         .background(.linearGradient(gradient, startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea()
+        
+        .onAppear() {
+            print("HSCIUACIUa")
+        }
     }
 }
 
