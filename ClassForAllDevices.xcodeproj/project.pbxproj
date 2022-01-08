@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5772789AD01008AF68E /* BottomTablePanel.swift */; };
+		801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */; };
+		801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD57B2789ADD0008AF68E /* TopImagePanel.swift */; };
 		80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */; };
 		80367AE42788E6D30092AE27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE32788E6D30092AE27 /* MainView.swift */; };
 		80367AE62788E6D70092AE27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE52788E6D70092AE27 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		801BD5772789AD01008AF68E /* BottomTablePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTablePanel.swift; sourceTree = "<group>"; };
+		801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleHeaderPanel.swift; sourceTree = "<group>"; };
+		801BD57B2789ADD0008AF68E /* TopImagePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImagePanel.swift; sourceTree = "<group>"; };
 		80367ADE2788E6D30092AE27 /* ClassForAllDevices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassForAllDevices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassForAllDevicesApp.swift; sourceTree = "<group>"; };
 		80367AE32788E6D30092AE27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				80367AE32788E6D30092AE27 /* MainView.swift */,
+				801BD57B2789ADD0008AF68E /* TopImagePanel.swift */,
+				801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */,
+				801BD5772789AD01008AF68E /* BottomTablePanel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,9 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */,
+				801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */,
 				8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */,
 				80367AE42788E6D30092AE27 /* MainView.swift in Sources */,
 				8060E9782788FBDB00E2ABEF /* GlobalConstant.swift in Sources */,
+				801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */,
 				80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,12 +319,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 104.420;
 				DEVELOPMENT_ASSET_PATHS = "\"ClassForAllDevices/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClassForAllDevices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Size Screen";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,12 +352,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 104.420;
 				DEVELOPMENT_ASSET_PATHS = "\"ClassForAllDevices/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClassForAllDevices/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Size Screen";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
