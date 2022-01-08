@@ -11,6 +11,8 @@
 		80367AE42788E6D30092AE27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE32788E6D30092AE27 /* MainView.swift */; };
 		80367AE62788E6D70092AE27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE52788E6D70092AE27 /* Assets.xcassets */; };
 		80367AE92788E6D70092AE27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE82788E6D70092AE27 /* Preview Assets.xcassets */; };
+		8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9742788FB1300E2ABEF /* ColorExtension.swift */; };
+		8060E9782788FBDB00E2ABEF /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		80367AE32788E6D30092AE27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		80367AE52788E6D70092AE27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80367AE82788E6D70092AE27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8060E9742788FB1300E2ABEF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */,
+				8060E9762788FBC100E2ABEF /* Model */,
 				80367AF12788EFEF0092AE27 /* View */,
+				8060E9732788FAE500E2ABEF /* Extension */,
 				80367AEF2788E7180092AE27 /* Resources */,
 			);
 			path = ClassForAllDevices;
@@ -81,6 +87,22 @@
 				80367AE32788E6D30092AE27 /* MainView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8060E9732788FAE500E2ABEF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8060E9742788FB1300E2ABEF /* ColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8060E9762788FBC100E2ABEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */,
 				80367AE42788E6D30092AE27 /* MainView.swift in Sources */,
+				8060E9782788FBDB00E2ABEF /* GlobalConstant.swift in Sources */,
 				80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
