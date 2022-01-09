@@ -13,25 +13,31 @@ struct MainView: View {
     
     //MARK: Properties
     
-    @ObservedObject private var controller = Controller()
+    @StateObject private var controller = Controller()
     
     private let noSpacing: Double = 0
     private let gradient = Gradient(colors: [.ziggurat, .tePapaGreen])
     
     var body: some View {
         VStack(spacing: noSpacing) {
-            TopImagePanel(controller.getData?.imageName ?? Image("no image"),
-                          controller.getData?.heightImage ?? 0)
+            TopImagePanel(controller.getData.imageName,
+                          controller.getData.heightImage)
             
-            MiddleHeaderPanel(controller.getData?.modelName ?? "no model")
+            MiddleHeaderPanel(controller.getData.modelName)
             
-            BottomTablePanel(controller.getData?.numberCells ?? 0)
+            ScrollView {
+                ForEach(0..<20) { item in
+                    CardTableView(item)
+                }
+                .padding(.vertical)
+            }
+//            BottomTablePanel()
         }
         .background(.linearGradient(gradient, startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea()
         
         .onAppear() {
-            print("HSCIUACIUa")
+            controller.getDeviceInfo()
         }
     }
 }

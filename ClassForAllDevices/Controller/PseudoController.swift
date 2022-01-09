@@ -12,26 +12,34 @@ import SwiftUI
 final class Controller: ObservableObject {
     
     //MARK: Properties
-
-    @Published var getData: DeviceStore?
+    
+    @Published var getData: DeviceStore
+    
+    //MARK: Initializer
+    
+    init() {
+        let defaultDevice = Device(modelName: "loading ...",
+                                   imageName: Image("noImage"),
+                                   heightImage: 220)
+        
+        getData = DeviceStore(defaultDevice)
+    }
+    
     
     //MARK: Public Methods
     
     func getDeviceInfo() {
         let device = Device(modelName: UIDevice.current.model,
                             imageName: Image("BigSur"),
-                            heightImage: heightImageDependingDevice(),
-                            numberCells: 20)
+                            heightImage: heightImageDependingDevice())
         
-        getData = DeviceStore(device)
-    }
-    
-    func gradualGradationColor(_ index: Int) -> Double {
-        1 - 0.025 * Double(index)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.getData = DeviceStore(device)
+        }
     }
     
     //MARK: Private Methods
-
+    
     private func heightImageDependingDevice() -> CGFloat {
         let heightDevice = UIScreen.main.bounds.size.height
         var heightImage: CGFloat = 0
