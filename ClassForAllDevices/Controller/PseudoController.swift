@@ -50,11 +50,11 @@ final class Controller: ObservableObject {
         
         switch heightDevice {
             //iPhone
-        case 568:   heightImage = 260 //4"
-        case 667:   heightImage = 265 //4,7"
-        case 736:   heightImage = 270 //5,5"
-        case 812:   heightImage = 275 //5,4" or 5,8"
-        case 844:   heightImage = 280 //6,1" XDR
+        case 568:   heightImage = 220 //4"
+        case 667:   heightImage = 240 //4,7"
+        case 736:   heightImage = 250 //5,5"
+        case 812:   heightImage = 260 //5,4" or 5,8"
+        case 844:   heightImage = 270 //6,1" XDR
         case 896:   heightImage = 285 //6,1" or 6,5"
         case 926:   heightImage = 300 //6,7"
             //iPad
