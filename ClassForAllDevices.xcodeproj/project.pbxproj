@@ -10,25 +10,29 @@
 		801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5772789AD01008AF68E /* BottomTablePanel.swift */; };
 		801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */; };
 		801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD57B2789ADD0008AF68E /* TopImagePanel.swift */; };
+		801BD5842789C3EC008AF68E /* PseudoMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5832789C3EB008AF68E /* PseudoMVC.swift */; };
+		801BD5872789FFD1008AF68E /* PseudoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5862789FFD0008AF68E /* PseudoController.swift */; };
 		80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */; };
 		80367AE42788E6D30092AE27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE32788E6D30092AE27 /* MainView.swift */; };
 		80367AE62788E6D70092AE27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE52788E6D70092AE27 /* Assets.xcassets */; };
 		80367AE92788E6D70092AE27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE82788E6D70092AE27 /* Preview Assets.xcassets */; };
 		8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9742788FB1300E2ABEF /* ColorExtension.swift */; };
-		8060E9782788FBDB00E2ABEF /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */; };
+		8060E9782788FBDB00E2ABEF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9772788FBDB00E2ABEF /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		801BD5772789AD01008AF68E /* BottomTablePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTablePanel.swift; sourceTree = "<group>"; };
 		801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleHeaderPanel.swift; sourceTree = "<group>"; };
 		801BD57B2789ADD0008AF68E /* TopImagePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImagePanel.swift; sourceTree = "<group>"; };
+		801BD5832789C3EB008AF68E /* PseudoMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoMVC.swift; sourceTree = "<group>"; };
+		801BD5862789FFD0008AF68E /* PseudoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoController.swift; sourceTree = "<group>"; };
 		80367ADE2788E6D30092AE27 /* ClassForAllDevices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassForAllDevices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassForAllDevicesApp.swift; sourceTree = "<group>"; };
 		80367AE32788E6D30092AE27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		80367AE52788E6D70092AE27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80367AE82788E6D70092AE27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8060E9742788FB1300E2ABEF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
+		8060E9772788FBDB00E2ABEF /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		801BD5852789FFA5008AF68E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				801BD5862789FFD0008AF68E /* PseudoController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		80367AD52788E6D30092AE27 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 			children = (
 				80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */,
 				8060E9762788FBC100E2ABEF /* Model */,
+				801BD5852789FFA5008AF68E /* Controller */,
 				80367AF12788EFEF0092AE27 /* View */,
 				8060E9732788FAE500E2ABEF /* Extension */,
 				80367AEF2788E7180092AE27 /* Resources */,
@@ -81,6 +94,7 @@
 		80367AEF2788E7180092AE27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				801BD5832789C3EB008AF68E /* PseudoMVC.swift */,
 				80367AE52788E6D70092AE27 /* Assets.xcassets */,
 				80367AE72788E6D70092AE27 /* Preview Content */,
 			);
@@ -109,7 +123,7 @@
 		8060E9762788FBC100E2ABEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8060E9772788FBDB00E2ABEF /* GlobalConstant.swift */,
+				8060E9772788FBDB00E2ABEF /* Device.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,9 +200,11 @@
 			files = (
 				801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */,
 				801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */,
+				801BD5842789C3EC008AF68E /* PseudoMVC.swift in Sources */,
 				8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */,
 				80367AE42788E6D30092AE27 /* MainView.swift in Sources */,
-				8060E9782788FBDB00E2ABEF /* GlobalConstant.swift in Sources */,
+				8060E9782788FBDB00E2ABEF /* Device.swift in Sources */,
+				801BD5872789FFD1008AF68E /* PseudoController.swift in Sources */,
 				801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */,
 				80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */,
 			);

@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-//MARK: BottomTablePanel
+//MARK: - BottomTablePanel
 
 struct BottomTablePanel: View {
+
+    //MARK: Properties
+    
+    @ObservedObject var controller: Controller
+    
+    //MARK: Initializer
+
+    init(_ controller: Controller) {
+        self.controller = controller
+    }
+    
     var body: some View {
         ScrollView {
-            ForEach(1..<20) { item in
+            ForEach(0..<controller.getData.numberCell, id: \.self) { item in
                 CardTableView(item)
             }
             .padding(.vertical)
@@ -20,19 +31,16 @@ struct BottomTablePanel: View {
     }
 }
 
-struct BottomTablePanel_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomTablePanel()
-    }
-}
-
-//MARK: CardTableView
+//MARK: - CardTableView
 
 struct CardTableView: View {
     
     //MARK: Properties
     
     let number: Int
+    
+    private let heightCell: CGFloat = 65
+    private let cornerRadius: CGFloat = 16
     
     //MARK: Initializer
     
@@ -47,7 +55,7 @@ struct CardTableView: View {
             
             Spacer()
             
-            Text("\(number)")
+            Text("\(number + 1)")
                 .bold()
                 .padding(.trailing)
         }
@@ -55,15 +63,15 @@ struct CardTableView: View {
         .padding()
         .foregroundColor(.defaultText)
         .frame(maxWidth: .infinity)
-        .frame(height: GlobalConstant.heightCell)
-        .background(Color.tePapaGreen.opacity(gradualGradationColor(number)),
-                    in: RoundedRectangle(cornerRadius: GlobalConstant.cornerRadius))
+        .frame(height: heightCell)
+        .background(Color.tePapaGreen.opacity(gradualGradationCell(number)),
+                    in: RoundedRectangle(cornerRadius: cornerRadius))
         .padding(.horizontal)
     }
     
     //MARK: Private Methods
-    
-    private func gradualGradationColor(_ index: Int) -> Double {
-        1 - 0.025 * Double(index)
+
+    func gradualGradationCell(_ index: Int) -> Double {
+        1 - 0.04 * Double(index)
     }
 }

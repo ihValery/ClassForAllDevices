@@ -7,24 +7,33 @@
 
 import SwiftUI
 
-//MARK: MainView
+//MARK: - MainView
 
 struct MainView: View {
     
     //MARK: Properties
+    
+    @ObservedObject private var controller = Controller()
+    
     private let noSpacing: Double = 0
     private let gradient = Gradient(colors: [.ziggurat, .tePapaGreen])
     
     var body: some View {
+        
         VStack(spacing: noSpacing) {
-            TopImagePanel()
             
-            MiddleHeaderPanel()
+            TopImagePanel(controller)
             
-            BottomTablePanel()
+            MiddleHeaderPanel(controller)
+            
+            BottomTablePanel(controller)
         }
         .background(.linearGradient(gradient, startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea()
+        
+        .onAppear() {
+            controller.getDeviceInfo()
+        }
     }
 }
 
