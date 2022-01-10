@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-//MARK: class DeviceStore
+//MARK: - class DeviceStore
 
 final class DeviceStore: ObservableObject {
     

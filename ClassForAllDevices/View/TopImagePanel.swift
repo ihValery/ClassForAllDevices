@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: TopImageView
+//MARK: - TopImageView
 
 struct TopImagePanel: View {
     
@@ -16,8 +16,6 @@ struct TopImagePanel: View {
     
     private let image: Image
     private var heightImage: CGFloat
-    
-    private let cornerRadius: CGFloat = 16
     
     //MARK: Initializer
     
@@ -28,13 +26,41 @@ struct TopImagePanel: View {
     }
     
     var body: some View {
+        switch image {
+        case Image("noImage"):
+            NoImageLoadingView()
+        default:
+            ImageLoadingView(image, heightImage)
+        }
+    }
+}
+
+//MARK: - ImageLoadingView
+
+struct ImageLoadingView: View {
+    
+    //MARK: Properties
+    
+    let image: Image
+    let heightImage: CGFloat
+    
+    private let cornerRadius: CGFloat = 16
+    
+    //MARK: Initializer
+    
+    init(_ image: Image, _ heightImage: CGFloat) {
+        self.image = image
+        self.heightImage = heightImage
+    }
+    
+    var body: some View {
         ZStack(alignment: .bottomTrailing) {
             image
                 .resizable()
                 .scaledToFill()
                 .frame(height: heightImage, alignment: .top)
                 .clipped()
-
+            
             Text("\( Int(heightImage) )")
                 .font(.headline)
                 .foregroundColor(.defaultText)
@@ -44,6 +70,21 @@ struct TopImagePanel: View {
                 .padding()
         }
         .frame(height: heightImage)
+    }
+}
+
+//MARK: - NoImageLoadingView
+
+struct NoImageLoadingView: View {
+    
+    //MARK: Properties
+    private let heightImage = UIScreen.main.bounds.height / 2
+    
+    var body: some View {
+        Image("noImage")
+            .resizable()
+            .scaledToFit()
+            .frame(height: heightImage, alignment: .center)
     }
 }
 

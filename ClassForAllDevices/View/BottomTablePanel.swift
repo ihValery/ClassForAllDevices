@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: BottomTablePanel
+//MARK: - BottomTablePanel
 
 struct BottomTablePanel: View {
 
@@ -31,14 +31,12 @@ struct BottomTablePanel: View {
     }
 }
 
-//MARK: CardTableView
+//MARK: - CardTableView
 
 struct CardTableView: View {
     
     //MARK: Properties
     
-//    @ObservedObject var controller: Controller
-
     let number: Int
     
     private let heightCell: CGFloat = 65
@@ -57,7 +55,7 @@ struct CardTableView: View {
             
             Spacer()
             
-            Text("\(number)")
+            Text("\(number + 1)")
                 .bold()
                 .padding(.trailing)
         }

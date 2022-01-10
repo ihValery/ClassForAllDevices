@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: MainView
+//MARK: - MainView
 
 struct MainView: View {
     

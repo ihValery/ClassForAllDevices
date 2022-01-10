@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: MiddleHeaderPanel
+//MARK: - MiddleHeaderPanel
 
 struct MiddleHeaderPanel: View {
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//MARK: class Controller
+//MARK: - class Controller
 
 final class Controller: ObservableObject {
     
@@ -35,9 +35,9 @@ final class Controller: ObservableObject {
                                         heightImage: heightImageDependingDevice(),
                                         numberCell: 20)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                getData = DeviceStore(device)
+                self.getData = DeviceStore(device)
             }
         }
     }
@@ -49,7 +49,7 @@ final class Controller: ObservableObject {
         var heightImage: CGFloat = 0
         
         switch heightDevice {
-            
+            //iPhone
         case 568:   heightImage = 260 //4"
         case 667:   heightImage = 265 //4,7"
         case 736:   heightImage = 270 //5,5"
@@ -57,7 +57,7 @@ final class Controller: ObservableObject {
         case 844:   heightImage = 280 //6,1" XDR
         case 896:   heightImage = 285 //6,1" or 6,5"
         case 926:   heightImage = 300 //6,7"
-            
+            //iPad
         case 1024:  heightImage = 450 //7,9" or 9,7"
         case 1133:  heightImage = 400 //8,3"
         case 1080:  heightImage = 430 //10,2"
