@@ -15,7 +15,7 @@ struct TopImagePanel: View {
     @ObservedObject var controller: Controller
     
     private let image: Image
-    private let heightImage: CGFloat
+    private var heightImage: CGFloat
     
     private let cornerRadius: CGFloat = 16
     
@@ -34,7 +34,7 @@ struct TopImagePanel: View {
                 .scaledToFill()
                 .frame(height: heightImage, alignment: .top)
                 .clipped()
-            
+
             Text("\( Int(heightImage) )")
                 .font(.headline)
                 .foregroundColor(.defaultText)

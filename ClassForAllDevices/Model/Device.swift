@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-//MARK: struct Device
-
-struct Device {
-    let modelName: String
-    let imageName: Image
-    let heightImage: CGFloat
-    let numberCell: Int
-}
 
 //MARK: class DeviceStore
 
@@ -26,6 +18,15 @@ final class DeviceStore: ObservableObject {
     @Published var imageName: Image
     @Published var heightImage: CGFloat
     @Published var numberCell: Int
+    
+    //MARK: struct Device
+    
+    struct Device {
+        let modelName: String
+        let imageName: Image
+        let heightImage: CGFloat
+        let numberCell: Int
+    }
     
     //MARK: Initializer
     

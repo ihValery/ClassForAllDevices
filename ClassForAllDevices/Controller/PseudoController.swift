@@ -18,10 +18,10 @@ final class Controller: ObservableObject {
     //MARK: Initializer
     
     init() {
-        let defaultDevice = Device(modelName: "loading ...",
-                                   imageName: Image("noImage"),
-                                   heightImage: 220,
-                                   numberCell: 0)
+        let defaultDevice = DeviceStore.Device(modelName: "loading ...",
+                                               imageName: Image("noImage"),
+                                               heightImage: 250,
+                                               numberCell: 0)
         
         getData = DeviceStore(defaultDevice)
     }
@@ -30,12 +30,12 @@ final class Controller: ObservableObject {
     //MARK: Public Methods
     
     func getDeviceInfo() {
-        let device = Device(modelName: UIDevice.current.model,
-                            imageName: Image("BigSur"),
-                            heightImage: heightImageDependingDevice(),
-                            numberCell: 20)
+        let device = DeviceStore.Device(modelName: UIDevice.current.model,
+                                        imageName: Image("BigSur"),
+                                        heightImage: heightImageDependingDevice(),
+                                        numberCell: 20)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                 getData = DeviceStore(device)
             }
@@ -49,12 +49,13 @@ final class Controller: ObservableObject {
         var heightImage: CGFloat = 0
         
         switch heightDevice {
-        case 568:   heightImage = 150 //4"
-        case 667:   heightImage = 170 //4,7"
-        case 736:   heightImage = 195 //5,5"
-        case 812:   heightImage = 220 //5,4" or 5,8"
-        case 844:   heightImage = 250 //6,1" XDR
-        case 896:   heightImage = 270 //6,1" or 6,5"
+            
+        case 568:   heightImage = 260 //4"
+        case 667:   heightImage = 265 //4,7"
+        case 736:   heightImage = 270 //5,5"
+        case 812:   heightImage = 275 //5,4" or 5,8"
+        case 844:   heightImage = 280 //6,1" XDR
+        case 896:   heightImage = 285 //6,1" or 6,5"
         case 926:   heightImage = 300 //6,7"
             
         case 1024:  heightImage = 450 //7,9" or 9,7"

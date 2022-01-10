@@ -13,18 +13,19 @@ struct MainView: View {
     
     //MARK: Properties
     
-    @StateObject private var controller = Controller()
+    @ObservedObject private var controller = Controller()
     
     private let noSpacing: Double = 0
     private let gradient = Gradient(colors: [.ziggurat, .tePapaGreen])
     
     var body: some View {
+        
         VStack(spacing: noSpacing) {
             
             TopImagePanel(controller)
             
             MiddleHeaderPanel(controller)
-
+            
             BottomTablePanel(controller)
         }
         .background(.linearGradient(gradient, startPoint: .top, endPoint: .bottom))
