@@ -20,18 +20,12 @@ struct MainView: View {
     
     var body: some View {
         VStack(spacing: noSpacing) {
-            TopImagePanel(controller.getData.imageName,
-                          controller.getData.heightImage)
             
-            MiddleHeaderPanel(controller.getData.modelName)
+            TopImagePanel(controller)
             
-            ScrollView {
-                ForEach(0..<20) { item in
-                    CardTableView(item)
-                }
-                .padding(.vertical)
-            }
-//            BottomTablePanel()
+            MiddleHeaderPanel(controller)
+
+            BottomTablePanel(controller)
         }
         .background(.linearGradient(gradient, startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea()

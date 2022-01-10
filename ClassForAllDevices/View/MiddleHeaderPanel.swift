@@ -12,14 +12,16 @@ import SwiftUI
 struct MiddleHeaderPanel: View {
     
     //MARK: Properties
+    @ObservedObject var controller: Controller
     
     let deviceModel: String
-    private let heightHeader: CGFloat = 80
+    private let heightHeader: CGFloat = 70
     
     //MARK: Initializer
     
-    init(_ deviceModel: String) {
-        self.deviceModel = deviceModel
+    init(_ controller: Controller) {
+        self.controller = controller
+        deviceModel = controller.getData.modelName
     }
 
     var body: some View {
@@ -35,6 +37,6 @@ struct MiddleHeaderPanel: View {
 
 struct MiddleHeaderPanel_Previews: PreviewProvider {
     static var previews: some View {
-        MiddleHeaderPanel("iPhone")
+        MiddleHeaderPanel(Controller())
     }
 }

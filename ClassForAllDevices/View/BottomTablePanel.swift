@@ -13,18 +13,17 @@ struct BottomTablePanel: View {
 
     //MARK: Properties
     
-//    @ObservedObject var controller: Controller
+    @ObservedObject var controller: Controller
     
-//    //MARK: Initializer
-//
-//    init(_ numberCells: Int) {
-//        self.numberCells = numberCells
-//    }
-//
+    //MARK: Initializer
+
+    init(_ controller: Controller) {
+        self.controller = controller
+    }
     
     var body: some View {
         ScrollView {
-            List(0..<20) { item in
+            ForEach(0..<controller.getData.numberCell, id: \.self) { item in
                 CardTableView(item)
             }
             .padding(.vertical)
@@ -32,21 +31,17 @@ struct BottomTablePanel: View {
     }
 }
 
-//struct BottomTablePanel_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BottomTablePanel(device: 20)
-//    }
-//}
-
 //MARK: CardTableView
 
 struct CardTableView: View {
     
     //MARK: Properties
     
+//    @ObservedObject var controller: Controller
+
     let number: Int
     
-    private let heightCell: CGFloat = 70
+    private let heightCell: CGFloat = 65
     private let cornerRadius: CGFloat = 16
     
     //MARK: Initializer
@@ -71,14 +66,14 @@ struct CardTableView: View {
         .foregroundColor(.defaultText)
         .frame(maxWidth: .infinity)
         .frame(height: heightCell)
-        .background(Color.tePapaGreen.opacity(gradualGradationColor(number)),
+        .background(Color.tePapaGreen.opacity(gradualGradationCell(number)),
                     in: RoundedRectangle(cornerRadius: cornerRadius))
         .padding(.horizontal)
     }
     
     //MARK: Private Methods
 
-    func gradualGradationColor(_ index: Int) -> Double {
+    func gradualGradationCell(_ index: Int) -> Double {
         1 - 0.04 * Double(index)
     }
 }

@@ -12,7 +12,6 @@ struct ClassForAllDevicesApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-//            MVCSwiftUIView()
         }
     }
 }

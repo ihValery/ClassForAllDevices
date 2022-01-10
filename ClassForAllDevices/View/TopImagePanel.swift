@@ -12,17 +12,19 @@ import SwiftUI
 struct TopImagePanel: View {
     
     //MARK: Properties
+    @ObservedObject var controller: Controller
     
-    let image: Image
-    let heightImage: CGFloat
+    private let image: Image
+    private let heightImage: CGFloat
     
     private let cornerRadius: CGFloat = 16
     
     //MARK: Initializer
     
-    init(_ image: Image, _ heightImage: CGFloat) {
-        self.image = image
-        self.heightImage = heightImage
+    init(_ controller: Controller) {
+        self.controller = controller
+        image = controller.getData.imageName
+        heightImage = controller.getData.heightImage
     }
     
     var body: some View {
@@ -47,6 +49,6 @@ struct TopImagePanel: View {
 
 struct TopImagePanel_Previews: PreviewProvider {
     static var previews: some View {
-        TopImagePanel(Image("BigSur"), 300)
+        TopImagePanel(Controller())
     }
 }

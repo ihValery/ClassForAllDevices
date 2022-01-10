@@ -13,6 +13,7 @@ struct Device {
     let modelName: String
     let imageName: Image
     let heightImage: CGFloat
+    let numberCell: Int
 }
 
 //MARK: class DeviceStore
@@ -24,6 +25,7 @@ final class DeviceStore: ObservableObject {
     @Published var modelName: String
     @Published var imageName: Image
     @Published var heightImage: CGFloat
+    @Published var numberCell: Int
     
     //MARK: Initializer
     
@@ -31,5 +33,6 @@ final class DeviceStore: ObservableObject {
         modelName = device.modelName
         imageName = device.imageName
         heightImage = device.heightImage
+        numberCell = device.numberCell
     }
 }

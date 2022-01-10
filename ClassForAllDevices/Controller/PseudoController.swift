@@ -20,7 +20,8 @@ final class Controller: ObservableObject {
     init() {
         let defaultDevice = Device(modelName: "loading ...",
                                    imageName: Image("noImage"),
-                                   heightImage: 220)
+                                   heightImage: 220,
+                                   numberCell: 0)
         
         getData = DeviceStore(defaultDevice)
     }
@@ -31,10 +32,13 @@ final class Controller: ObservableObject {
     func getDeviceInfo() {
         let device = Device(modelName: UIDevice.current.model,
                             imageName: Image("BigSur"),
-                            heightImage: heightImageDependingDevice())
+                            heightImage: heightImageDependingDevice(),
+                            numberCell: 20)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.getData = DeviceStore(device)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                getData = DeviceStore(device)
+            }
         }
     }
     
@@ -60,6 +64,7 @@ final class Controller: ObservableObject {
         case 1180:  heightImage = 450 //10,9"
         case 1194:  heightImage = 460 //11"
         case 1366:  heightImage = 510 //12,9"
+            
         default:    break
         }
         

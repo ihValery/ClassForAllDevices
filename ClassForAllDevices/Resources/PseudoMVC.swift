@@ -71,16 +71,20 @@ struct MVCSwiftUIView: View {
     
     var body: some View {
         
-        VStack(spacing: spacing) {
-            MiniTableView(deviceInfo: controller.getData ?? DeviceStorePseudo(device: plugDevice))
+        ZStack {
+            BackgroundUIView()
             
-            VStack {
-                ButtonView("get Device info", !isEmptyDeviceStore) {
-                    getDeviceInfo()
-                }
+            VStack(spacing: spacing) {
+                MiniTableView(deviceInfo: controller.getData ?? DeviceStorePseudo(device: plugDevice))
                 
-                ButtonView("remove Device info", isEmptyDeviceStore) {
-                    removeDeviceInfo()
+                VStack {
+                    ButtonView("get Device info", !isEmptyDeviceStore) {
+                        getDeviceInfo()
+                    }
+                    
+                    ButtonView("remove Device info", isEmptyDeviceStore) {
+                        removeDeviceInfo()
+                    }
                 }
             }
         }
@@ -166,4 +170,17 @@ struct MiniTableView: View {
         }
         .font(.title2)
     }
+}
+
+//MARK: - UIView
+
+struct BackgroundUIView: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> some UIView {
+        let view = UIView()
+        view.backgroundColor = .gray
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) { }
 }
