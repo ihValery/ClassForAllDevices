@@ -1,5 +1,5 @@
 //
-//  MiddleHeaderPanel.swift
+//  MiddleHeaderPanelView.swift
 //  ClassForAllDevices
 //
 //  Created by Валерий Игнатьев on 08.01.2022.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-//MARK: - MiddleHeaderPanel
+//MARK: - MiddleHeaderPanelView
 
-struct MiddleHeaderPanel: View {
+struct MiddleHeaderPanelView: View {
     
     //MARK: Properties
     @ObservedObject var controller: Controller
@@ -37,6 +37,6 @@ struct MiddleHeaderPanel: View {
 
 struct MiddleHeaderPanel_Previews: PreviewProvider {
     static var previews: some View {
-        MiddleHeaderPanel(Controller())
+        MiddleHeaderPanelView(Controller())
     }
 }

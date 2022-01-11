@@ -1,5 +1,5 @@
 //
-//  TopImagePanel.swift
+//  TopImagePanelView.swift
 //  ClassForAllDevices
 //
 //  Created by Валерий Игнатьев on 08.01.2022.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-//MARK: - TopImageView
+//MARK: - TopImagePanelView
 
-struct TopImagePanel: View {
+struct TopImagePanelView: View {
     
     //MARK: Properties
     @ObservedObject var controller: Controller
@@ -90,6 +90,6 @@ struct NoImageLoadingView: View {
 
 struct TopImagePanel_Previews: PreviewProvider {
     static var previews: some View {
-        TopImagePanel(Controller())
+        TopImagePanelView(Controller())
     }
 }
