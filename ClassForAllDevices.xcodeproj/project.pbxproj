@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5772789AD01008AF68E /* BottomTablePanel.swift */; };
-		801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */; };
-		801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD57B2789ADD0008AF68E /* TopImagePanel.swift */; };
+		801BD5782789AD01008AF68E /* BottomTablePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5772789AD01008AF68E /* BottomTablePanelView.swift */; };
+		801BD57A2789AD9A008AF68E /* MiddleHeaderPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5792789AD9A008AF68E /* MiddleHeaderPanelView.swift */; };
+		801BD57C2789ADD0008AF68E /* TopImagePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD57B2789ADD0008AF68E /* TopImagePanelView.swift */; };
 		801BD5842789C3EC008AF68E /* PseudoMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5832789C3EB008AF68E /* PseudoMVC.swift */; };
-		801BD5872789FFD1008AF68E /* PseudoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5862789FFD0008AF68E /* PseudoController.swift */; };
+		801BD5872789FFD1008AF68E /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BD5862789FFD0008AF68E /* Controller.swift */; };
 		80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */; };
 		80367AE42788E6D30092AE27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80367AE32788E6D30092AE27 /* MainView.swift */; };
 		80367AE62788E6D70092AE27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE52788E6D70092AE27 /* Assets.xcassets */; };
 		80367AE92788E6D70092AE27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80367AE82788E6D70092AE27 /* Preview Assets.xcassets */; };
 		8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9742788FB1300E2ABEF /* ColorExtension.swift */; };
-		8060E9782788FBDB00E2ABEF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9772788FBDB00E2ABEF /* Device.swift */; };
+		8060E9782788FBDB00E2ABEF /* DeviceModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060E9772788FBDB00E2ABEF /* DeviceModelStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		801BD5772789AD01008AF68E /* BottomTablePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTablePanel.swift; sourceTree = "<group>"; };
-		801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleHeaderPanel.swift; sourceTree = "<group>"; };
-		801BD57B2789ADD0008AF68E /* TopImagePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImagePanel.swift; sourceTree = "<group>"; };
+		801BD5772789AD01008AF68E /* BottomTablePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTablePanelView.swift; sourceTree = "<group>"; };
+		801BD5792789AD9A008AF68E /* MiddleHeaderPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleHeaderPanelView.swift; sourceTree = "<group>"; };
+		801BD57B2789ADD0008AF68E /* TopImagePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImagePanelView.swift; sourceTree = "<group>"; };
 		801BD5832789C3EB008AF68E /* PseudoMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoMVC.swift; sourceTree = "<group>"; };
-		801BD5862789FFD0008AF68E /* PseudoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoController.swift; sourceTree = "<group>"; };
+		801BD5862789FFD0008AF68E /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		80367ADE2788E6D30092AE27 /* ClassForAllDevices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassForAllDevices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80367AE12788E6D30092AE27 /* ClassForAllDevicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassForAllDevicesApp.swift; sourceTree = "<group>"; };
 		80367AE32788E6D30092AE27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		80367AE52788E6D70092AE27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80367AE82788E6D70092AE27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8060E9742788FB1300E2ABEF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		8060E9772788FBDB00E2ABEF /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		8060E9772788FBDB00E2ABEF /* DeviceModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 		801BD5852789FFA5008AF68E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				801BD5862789FFD0008AF68E /* PseudoController.swift */,
+				801BD5862789FFD0008AF68E /* Controller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,9 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				80367AE32788E6D30092AE27 /* MainView.swift */,
-				801BD57B2789ADD0008AF68E /* TopImagePanel.swift */,
-				801BD5792789AD9A008AF68E /* MiddleHeaderPanel.swift */,
-				801BD5772789AD01008AF68E /* BottomTablePanel.swift */,
+				801BD57B2789ADD0008AF68E /* TopImagePanelView.swift */,
+				801BD5792789AD9A008AF68E /* MiddleHeaderPanelView.swift */,
+				801BD5772789AD01008AF68E /* BottomTablePanelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 		8060E9762788FBC100E2ABEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8060E9772788FBDB00E2ABEF /* Device.swift */,
+				8060E9772788FBDB00E2ABEF /* DeviceModelStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,14 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801BD57C2789ADD0008AF68E /* TopImagePanel.swift in Sources */,
-				801BD57A2789AD9A008AF68E /* MiddleHeaderPanel.swift in Sources */,
+				801BD57C2789ADD0008AF68E /* TopImagePanelView.swift in Sources */,
+				801BD57A2789AD9A008AF68E /* MiddleHeaderPanelView.swift in Sources */,
 				801BD5842789C3EC008AF68E /* PseudoMVC.swift in Sources */,
 				8060E9752788FB1300E2ABEF /* ColorExtension.swift in Sources */,
 				80367AE42788E6D30092AE27 /* MainView.swift in Sources */,
-				8060E9782788FBDB00E2ABEF /* Device.swift in Sources */,
-				801BD5872789FFD1008AF68E /* PseudoController.swift in Sources */,
-				801BD5782789AD01008AF68E /* BottomTablePanel.swift in Sources */,
+				8060E9782788FBDB00E2ABEF /* DeviceModelStore.swift in Sources */,
+				801BD5872789FFD1008AF68E /* Controller.swift in Sources */,
+				801BD5782789AD01008AF68E /* BottomTablePanelView.swift in Sources */,
 				80367AE22788E6D30092AE27 /* ClassForAllDevicesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,8 +346,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,8 +379,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

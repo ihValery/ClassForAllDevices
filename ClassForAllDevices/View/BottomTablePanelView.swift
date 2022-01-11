@@ -1,5 +1,5 @@
 //
-//  BottomTablePanel.swift
+//  BottomTablePanelView.swift
 //  ClassForAllDevices
 //
 //  Created by Валерий Игнатьев on 08.01.2022.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-//MARK: - BottomTablePanel
+//MARK: - BottomTablePanelView
 
-struct BottomTablePanel: View {
+struct BottomTablePanelView: View {
 
     //MARK: Properties
     
@@ -24,12 +24,19 @@ struct BottomTablePanel: View {
     var body: some View {
         ScrollView {
             ForEach(0..<controller.getData.numberCell, id: \.self) { item in
-                CardTableView(item)
+                CardTableView(controller, item)
             }
             .padding(.vertical)
         }
     }
 }
+
+struct BottomTablePanel_Previews: PreviewProvider {
+    static var previews: some View {
+        BottomTablePanelView(Controller())
+    }
+}
+
 
 //MARK: - CardTableView
 
@@ -37,6 +44,7 @@ struct CardTableView: View {
     
     //MARK: Properties
     
+    var controller: Controller
     let number: Int
     
     private let heightCell: CGFloat = 65
@@ -44,7 +52,8 @@ struct CardTableView: View {
     
     //MARK: Initializer
     
-    init(_ number: Int) {
+    init(_ controller: Controller, _ number: Int) {
+        self.controller = controller
         self.number = number
     }
     
@@ -64,14 +73,9 @@ struct CardTableView: View {
         .foregroundColor(.defaultText)
         .frame(maxWidth: .infinity)
         .frame(height: heightCell)
-        .background(Color.tePapaGreen.opacity(gradualGradationCell(number)),
+        .background(Color.tePapaGreen
+                        .opacity(controller.gradualGradationCell(number)),
                     in: RoundedRectangle(cornerRadius: cornerRadius))
         .padding(.horizontal)
-    }
-    
-    //MARK: Private Methods
-
-    func gradualGradationCell(_ index: Int) -> Double {
-        1 - 0.04 * Double(index)
     }
 }

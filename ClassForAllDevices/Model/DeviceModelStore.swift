@@ -1,5 +1,5 @@
 //
-//  Device.swift
+//  DeviceModelStore.swift
 //  ClassForAllDevices
 //
 //  Created by Валерий Игнатьев on 08.01.2022.
@@ -7,21 +7,20 @@
 
 import SwiftUI
 
+//MARK: - class DeviceModelStore
 
-//MARK: - class DeviceStore
-
-final class DeviceStore: ObservableObject {
+final class DeviceModelStore: ObservableObject {
     
     //MARK: Properties
     
-    @Published var modelName: String
-    @Published var imageName: Image
-    @Published var heightImage: CGFloat
-    @Published var numberCell: Int
+    let modelName: String
+    let imageName: Image
+    let heightImage: CGFloat
+    let numberCell: Int
     
     //MARK: struct Device
     
-    struct Device {
+    struct DeviceModel {
         let modelName: String
         let imageName: Image
         let heightImage: CGFloat
@@ -30,7 +29,7 @@ final class DeviceStore: ObservableObject {
     
     //MARK: Initializer
     
-    init(_ device: Device) {
+    init(_ device: DeviceModel) {
         modelName = device.modelName
         imageName = device.imageName
         heightImage = device.heightImage
